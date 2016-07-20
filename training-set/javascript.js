@@ -33,6 +33,7 @@ function getXHR() {
     try { return new ActiveXObject('Msxml2.XMLHTTP.3.0'); } catch(e) {}
     try { return new ActiveXObject('Msxml2.XMLHTTP'); } catch(e) {}
   }
+  console.log('failed');
   return false;
 }
 
@@ -183,6 +184,7 @@ function parseHeader(str) {
     fields[field] = val;
   }
 
+  console.log('fields:', fields);
   return fields;
 }
 
